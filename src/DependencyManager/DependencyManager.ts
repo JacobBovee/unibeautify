@@ -96,10 +96,10 @@ export interface DependencyRegistry {
 */
 
 export interface DependenciesForBeautifierRegistry {
-    [dependencyName: string]: {
-      [optionsKey: string]: Dependency;
-      // [optionName in BeautifierOptionName]: Dependency;
-    };
+  [dependencyName: string]: {
+    [optionsKey: string]: Dependency;
+    // [optionName in BeautifierOptionName]: Dependency;
+  };
 }
 
 export interface DependencyRegistry {

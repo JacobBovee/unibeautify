@@ -88,11 +88,12 @@ function replaceInterface(
   interfaceName: string,
   newInterfaceBody: string
 ): string {
-  return [originalContents, (
+  return [
+    originalContents,
     `export interface ${interfaceName} {
 ${newInterfaceBody}
-}`
-  )].join("\n");
+}`,
+  ].join("\n");
 }
 
 function replaceType(
@@ -100,7 +101,8 @@ function replaceType(
   typeName: string,
   newTypeBody: string
 ): string {
-  return [originalContents, (
-    `export declare type ${typeName} = ${newTypeBody};`
-  )].join("\n");
+  return [
+    originalContents,
+    `export declare type ${typeName} = ${newTypeBody};`,
+  ].join("\n");
 }

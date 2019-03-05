@@ -1,4 +1,10 @@
-import { Unibeautify, Language, Beautifier, OptionsRegistry, BeautifierOptionName } from "../../src/";
+import {
+  Unibeautify,
+  Language,
+  Beautifier,
+  OptionsRegistry,
+  BeautifierOptionName,
+} from "../../src/";
 
 test("should get all loaded options", () => {
   const unibeautify = new Unibeautify();

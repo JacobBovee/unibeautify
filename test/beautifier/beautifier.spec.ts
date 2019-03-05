@@ -183,7 +183,8 @@ test("should successfully transform option values for beautifier", () => {
           // ["indent_char", "indent_size", "indent_with_tabs"],
           // (optionValues) => optionValues.indent_char + optionValues.indent_size,
           ["value1", "basicTransform"],
-          (optionValues: any) => optionValues.value1 + optionValues.basicTransform,
+          (optionValues: any) =>
+            optionValues.value1 + optionValues.basicTransform,
         ],
         isUndefined: undefined,
         renamed1: "value1",

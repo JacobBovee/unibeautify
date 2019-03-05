@@ -34,7 +34,9 @@ Function to process the given options and return a final option value.
 //   OptionNames extends keyof LanguageSpecificOptionValues
 // > = (options: Pick<LanguageSpecificOptionValues, OptionNames>) => any;
 
-export type BeautifierOptionTransformFunction = (options: Partial<LanguageSpecificOptionValues>) => any;
+export type BeautifierOptionTransformFunction = (
+  options: Partial<LanguageSpecificOptionValues>
+) => any;
 
 // export type BeautifierOptionTransformFunction<
 //   OptionNames extends BeautifierOptionName
@@ -65,7 +67,7 @@ export type BeautifyOptionTransform<
 
 export type BeautifyOptionTransform = [
   BeautifierOptionName[],
-  BeautifierOptionTransformFunction,
+  BeautifierOptionTransformFunction
 ];
 
 /*
@@ -162,7 +164,7 @@ export interface BeautifierBeautifyData {
 }
 
 export type LanguageSpecificOptionValues = {
-  [optionName in BeautifierOptionName]?: any;
+  [optionName in BeautifierOptionName]?: any
 };
 
 export interface BeautifierSpecificOptionValues {
@@ -183,7 +185,8 @@ export type OptionValues = LanguageSpecificOptionValues & {
   beautifiers?: string[];
 } & {
   // [beautifierName: string]: BeautifierSpecificOptionValues & DependenciesForBeautifierRegistry | string[] | undefined;
-  [beautifierName: string]: BeautifierSpecificOptionValues & DependenciesForBeautifierRegistry;
+  [beautifierName: string]: BeautifierSpecificOptionValues &
+    DependenciesForBeautifierRegistry;
 };
 
 /*
